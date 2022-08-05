@@ -43,5 +43,22 @@ const aEl = document.querySelector('a');
 aEl.setAttribute('href', 'https://google.com');
 aEl.setAttribute('target', '_blank');
 
+pEl.setAttribute('class', 'red bold important large-text');
+
+pEl.classList.remove('red');
+pEl.classList.add('special');
 
 
+//how to select multiple DOM elements using querySelectorAll())
+const liEls = document.querySelectorAll('.comment');
+
+for(let i = 0; i< liEls.length; i++) {
+    console.log(liEls[i]);
+}
+
+//we can also use the .forEach method
+document.querySelector('ol').style.listStyleType = 'upper-roman'
+
+liEls.forEach(function(li){
+    li.style.color = 'dodgerblue';
+})
